@@ -14,11 +14,13 @@ public class Tris_TicTacToe {
         while (this.gameOn){
             char winner = checkWin();
             if(winner==player_1 || winner== player_2){
+                stampaGioco();
+                System.out.println("Winner: "+winner);
                 gameOn=false;
             }
             if(gameOn){
                 stampaGioco();
-                System.out.println("Player, scegli la posizione:");
+                System.out.println("Player "+actualPlayer+" , scegli la posizione:");
                 Scanner sc = new Scanner(System.in);
                 char sceltaCasella = sc.next().charAt(0);
                 inserisciScelta(sceltaCasella, actualPlayer);

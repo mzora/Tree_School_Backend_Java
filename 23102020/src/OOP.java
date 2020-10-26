@@ -1,7 +1,8 @@
 public class OOP {
     public static void main(String[] args) throws Exception {
         //TestColore();
-        TestForme2();
+        //TestForme2();
+        TestLampadina();
     }
 
     public static void TestContatore(){
@@ -40,5 +41,15 @@ public class OOP {
         Cerchio c = new Cerchio(5);
         System.out.println(c.getColore().toString());
     }
+    public static void TestLampadina(){
+        Lampadina bulb1 = new Lampadina();
 
+        bulb1.click();
+        bulb1.click();
+        bulb1.click();
+        bulb1.click();
+        bulb1.click();
+        bulb1.click();
+
+    }
 }

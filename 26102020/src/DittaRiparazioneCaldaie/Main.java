@@ -19,5 +19,9 @@ public class Main {
         ditta.repairInsert("corso Venezia 29", 3);
 
         ditta.getAllRiparazioni();
+
+        ditta.assignRepairToTecnico(1,"Rossi");
+        ditta.assignRepairToTecnico(0,"Magalli");
+
     }
 }

@@ -19,6 +19,10 @@ public class Riparazione {
         return this.state;
     }
 
+    public void setState(String state) {
+        this.state = state;
+    }
+
     public void setRepairAddr(String r){
         this.repairAddr =r;
     }

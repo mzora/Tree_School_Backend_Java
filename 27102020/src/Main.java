@@ -38,6 +38,4 @@ public class Main {
         //newList.remove(40);
         System.out.println(Arrays.toString(newList.getLista()));
     }
-
-
 }

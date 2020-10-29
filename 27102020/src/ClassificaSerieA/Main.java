@@ -2,6 +2,11 @@ package ClassificaSerieA;
 
 public class Main {
     public static void main(String[] args){
+
+        TestClassifica();
+    }
+
+    public static void TestClassifica(){
         Squadra Juventus = new Squadra(1, "Juventus FC");
 
         Juventus.addGiocatore(new Giocatore(1, "gigi", "buffon"));
@@ -22,5 +27,8 @@ public class Main {
         newClassifica.esitoPartita(Milan, 0, Inter, 2);
 
         newClassifica.getClassifica();
+        newClassifica.getMigliorAttacco();
+        newClassifica.getPeggiorDifesa();
     }
+
 }

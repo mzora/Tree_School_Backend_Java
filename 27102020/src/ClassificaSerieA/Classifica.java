@@ -56,9 +56,27 @@ public class Classifica {
 
     public void getMigliorAttacco(){
         //confronto gol fatti tra le squadre
+        Squadra max = squadre[0];
+
+        for(int i=1; i < squadre.length; i++){
+            if(squadre[i].getGolFatti() > max.getGolFatti()){
+                max = squadre[i];
+            }
+        }
+
+        System.out.println("Squadra col migliore attacco: "+max.getNomeSquadra()+" gol fatti:"+max.getGolFatti());
     }
 
     public void getPeggiorDifesa(){
         //confronto gol subiti tra le squadre
+        Squadra min = squadre[0];
+
+        for(int i=1; i < squadre.length; i++){
+            if(squadre[i].getGolSubiti() > min.getGolSubiti()){
+                min = squadre[i];
+            }
+        }
+
+        System.out.println("Squadra con peggior difesa: "+min.getNomeSquadra()+" gol subiti:"+min.getGolSubiti());
     }
 }

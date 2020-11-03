@@ -9,7 +9,7 @@ public class Treno {
     protected int nPasseggeri;
     protected int nMaxPasseggeri;
 
-    protected ArrayList<Vagone> vagoni= new ArrayList<>();
+    protected ArrayList<Vagone> vagoni= new ArrayList<Vagone>();
     protected boolean fermoInStazione;
 
     public Treno(int cod){

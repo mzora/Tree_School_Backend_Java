@@ -1,4 +1,6 @@
 public class VagonePasseggero extends Vagone{
+
+
     public VagonePasseggero(int cod, int capMax) {
         super(cod, capMax);
     }

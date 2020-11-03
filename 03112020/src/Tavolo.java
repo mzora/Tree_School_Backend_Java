@@ -4,7 +4,6 @@ public class Tavolo {
     private int codice;
     private final int capienzaTavolo =4;
     private ArrayList<Passeggero> personeAlTavolo;
-
     public Tavolo(int codice){
         this.codice=codice;
         personeAlTavolo =new ArrayList<>();
@@ -17,7 +16,7 @@ public class Tavolo {
     void addPersonaAlTavolo(Passeggero p){
         if(personeAlTavolo.size()<capienzaTavolo) {
             personeAlTavolo.add(p);
-            System.out.println("Passeggero" + p.getCodice() + "aggiunto");
+            System.out.println("Passeggero " + p.getCodice() + " aggiunto");
         }
         else{
             System.out.println("tavolo completo");

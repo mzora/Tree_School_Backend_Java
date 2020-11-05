@@ -5,7 +5,7 @@ public class Treno {
     protected int velocitaAttuale;
     protected int nMaxVagoni;
     //protected boolean statoPorteVagoni;//T:aperte; F:chiuse; null:guaste
-    protected StatoPorte statoPorteVagoni;
+    //protected StatoPorte statoPorteVagoni;
     protected int nPasseggeri;
     protected int nMaxPasseggeri;
 
@@ -15,7 +15,7 @@ public class Treno {
     public Treno(int cod){
         this.codice=cod;
         this.velocitaAttuale=0;
-        this.statoPorteVagoni=StatoPorte.CHIUSE;
+        //this.statoPorteVagoni=StatoPorte.CHIUSE;
         this.nPasseggeri=0;
         this.fermoInStazione=true;
     }
@@ -51,7 +51,7 @@ public class Treno {
     void EntrareInStazione(){
         Frenare();
         this.fermoInStazione=true;
-        this.statoPorteVagoni=StatoPorte.APERTE;
+        //this.statoPorteVagoni=StatoPorte.APERTE;
     }
     void PasseggeroScende(){
         if(this.nPasseggeri>0)

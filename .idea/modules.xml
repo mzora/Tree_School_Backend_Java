@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/02112020/02112020.iml" filepath="$PROJECT_DIR$/02112020/02112020.iml" />
       <module fileurl="file://$PROJECT_DIR$/03112020/03112020.iml" filepath="$PROJECT_DIR$/03112020/03112020.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05112020/05112020.iml" filepath="$PROJECT_DIR$/05112020/05112020.iml" />
       <module fileurl="file://$PROJECT_DIR$/15102020/15102020.iml" filepath="$PROJECT_DIR$/15102020/15102020.iml" />
       <module fileurl="file://$PROJECT_DIR$/19102020/19102020.iml" filepath="$PROJECT_DIR$/19102020/19102020.iml" />
       <module fileurl="file://$PROJECT_DIR$/20102020/20102020.iml" filepath="$PROJECT_DIR$/20102020/20102020.iml" />
@@ -13,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/26102020/26102020.iml" filepath="$PROJECT_DIR$/26102020/26102020.iml" />
       <module fileurl="file://$PROJECT_DIR$/27102020/27102020.iml" filepath="$PROJECT_DIR$/27102020/27102020.iml" />
       <module fileurl="file://$PROJECT_DIR$/29102020/29102020.iml" filepath="$PROJECT_DIR$/29102020/29102020.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04112020/IlMioPrimoBot.iml" filepath="$PROJECT_DIR$/04112020/IlMioPrimoBot.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tree_School_Backend_Java.iml" filepath="$PROJECT_DIR$/Tree_School_Backend_Java.iml" />
     </modules>
   </component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Botticelli_lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/04112020/telegramLibrary/Botticelli_lib/gson-2.8.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/04112020/telegramLibrary/Botticelli_lib/okio-1.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/04112020/telegramLibrary/Botticelli_lib/okhttp-3.9.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

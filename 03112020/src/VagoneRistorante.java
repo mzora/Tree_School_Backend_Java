@@ -48,12 +48,12 @@ public class VagoneRistorante extends Vagone {
         }
 
         void addPersonaAlTavolo(Passeggero p){
-            if(personeAlTavolo.size()<capienzaTavolo) {
+            if(personeAlTavolo.size()<capienzaTavolo && p.condizione==CondizionePasseggero.AFFAMATO) {
                 personeAlTavolo.add(p);
                 System.out.println("Passeggero " + p.getCodice() + " aggiunto");
             }
             else{
-                System.out.println("tavolo completo");
+                System.out.println("tavolo completo o passaggero non affamato");
             }
         }
     }

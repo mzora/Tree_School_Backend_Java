@@ -4,8 +4,13 @@ public class TrenoRegionale extends Treno{
         this.nMaxVagoni=15;
     }
 
-    void addVagone(VagonePasseggero v){
-        if(this.fermoInStazione)
+    void addVagone(Vagone v){
+        if(this.fermoInStazione && vagoni.size()<nMaxVagoni && v instanceof VagonePasseggero) {
             this.vagoni.add(v);
+            System.out.println("vagone aggiunto");
+        }
+        else{
+            System.out.println("Condizione mancante per aggiungere il vagone");
+        }
     }
 }

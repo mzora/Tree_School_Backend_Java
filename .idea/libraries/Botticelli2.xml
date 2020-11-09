@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Botticelli">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/04112020/telegramLibrary/Botticelli.jar!/" />
+      <root url="jar://$PROJECT_DIR$/telegramLibrary/Botticelli.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

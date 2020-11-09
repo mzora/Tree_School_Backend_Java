@@ -11,6 +11,7 @@ public class Treno {
 
     protected ArrayList<Vagone> vagoni= new ArrayList<Vagone>();
     protected boolean fermoInStazione;
+    protected int idStazioneAttuale;
 
     public Treno(int cod){
         this.codice=cod;
@@ -48,10 +49,20 @@ public class Treno {
             }
         }*/
 
-    void EntrareInStazione(){
+    void EntrareInStazione(int idStazione){
         Frenare();
         this.fermoInStazione=true;
+        this.idStazioneAttuale=idStazione;
         //this.statoPorteVagoni=StatoPorte.APERTE;
+
+        for (Vagone vagone : vagoni) {
+            for (Passeggero passeggero : vagone.passeggeri) {
+                if(passeggero.getIdStazioneArrivo()==this.idStazioneAttuale){
+                    vagone.AddRemPasseggero(passeggero,false);
+                }
+            }
+        }
+
     }
     void PasseggeroScende(){
         if(this.nPasseggeri>0)
@@ -63,12 +74,25 @@ public class Treno {
     }
 
     void addVagone(Vagone v){
-        if(this.fermoInStazione && vagoni.size()<nMaxVagoni)
+        if(this.fermoInStazione && vagoni.size()<nMaxVagoni) {
             this.vagoni.add(v);
+            System.out.println("vagone aggiunto");
+        }
+        else{
+            System.out.println("Condizione mancante per aggiungere il vagone");
+        }
     }
 
-    void remVagone(Vagone v){
-        if(!vagoni.isEmpty())
+    void remVagone(Vagone v) {
+        if (!vagoni.isEmpty() && v.passeggeri.isEmpty()) {
             vagoni.remove(v);
+            System.out.println("vagone rimosso");
+        }else{
+            System.out.println("condizione mancante");
+        }
+    }
+
+    void setIdStazioneAttuale(int idStazione){
+        this.idStazioneAttuale=idStazione;
     }
 }

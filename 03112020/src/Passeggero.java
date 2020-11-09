@@ -1,23 +1,31 @@
 public class Passeggero {
-    private int codice;
+    private int codiceBiglietto;
     private String nome;
     protected int idVagone;
+    protected CondizionePasseggero condizione;
+    private int idStazioneArrivo;
 
-    public Passeggero(int cod){
-        this.codice=cod;
+    public Passeggero(int codBiglietto){
+        this.codiceBiglietto=codBiglietto;
     }
 
-    public Passeggero(int cod, String nome, int idvagone){
-        this.codice=cod;
+    public Passeggero(int codBiglietto, String nome, int idvagone, int idSA){
+        this.codiceBiglietto=codBiglietto;
         this.nome=nome;
         this.idVagone=idvagone;
+        this.condizione = CondizionePasseggero.SEMPLICE;
+        this.idStazioneArrivo=idSA;
     }
 
     public int getCodice() {
-        return codice;
+        return codiceBiglietto;
     }
 
     public int getIdVagone(){
         return this.idVagone;
+    }
+
+    public int getIdStazioneArrivo() {
+        return idStazioneArrivo;
     }
 }

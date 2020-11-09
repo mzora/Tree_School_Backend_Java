@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Vagone {
-    private int idVagone;
+    protected int idVagone;
     protected final int capienzaMax=100;
     protected int nPasseggeriABordo;
     protected ArrayList<Porta> porte = new ArrayList<Porta>();
@@ -30,12 +30,18 @@ public class Vagone {
         }
     }
 
-    void addPasseggero(Passeggero p){
-        if(passeggeri.size()<capienzaMax && p.getIdVagone()==this.idVagone)
+    boolean AddRemPasseggero(Passeggero p, boolean sale){
+        if(sale && passeggeri.size() < capienzaMax && p.getIdVagone()==this.idVagone){
             passeggeri.add(p);
-        else {
-            System.out.println("Raggiunta capienza max di questo vagone");
+            System.out.println("passeggero salito");
+            return true;
+        }else if(!sale){
+            passeggeri.remove(p);
+            System.out.println("passeggero sceso");
+            return true;
         }
+        System.out.println("condizione mancante per salire");
+        return false;
     }
 
     private class Porta {

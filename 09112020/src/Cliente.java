@@ -1,24 +1,47 @@
+import java.util.Comparator;
+import java.util.Objects;
+import java.util.UUID;
+
 public class Cliente implements Comparable<Cliente>{
     private String nome;
     private String cognome;
     private int eta;
-    private int id;
+
+    public UUID getId() {
+        return id;
+    }
+
+    private UUID id;
 
 
-    public Cliente(String n, String c, int e, int id){
+    public Cliente(String n, String c, int e){
         this.cognome=c;
         this.nome=n;
         this.eta=e;
-        this.id=id;
+        this.id=UUID.randomUUID();
     }
     public int getEta() {
         return eta;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if(this==obj)return true;
+        if(obj==null || getClass()!=obj.getClass())return false;
+        Cliente cliente =(Cliente) obj;
+        return Objects.equals(id, cliente.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
     //per ottenere l'ordine dei clienti
     @Override
-    public int compareTo(Cliente c) {
-        return -Integer.compare(this.eta, c.getEta());
+    public int compareTo(Cliente o) {
+        return Comparator.comparing((Cliente c)->c.getEta()).reversed().thenComparing(Cliente::getId).compare(this,o);
+        //return -Integer.compare(this.eta, c.getEta());
     }
 
     @Override

@@ -6,13 +6,7 @@ public class Cliente implements Comparable<Cliente>{
     private String nome;
     private String cognome;
     private int eta;
-
-    public UUID getId() {
-        return id;
-    }
-
     private UUID id;
-
 
     public Cliente(String n, String c, int e){
         this.cognome=c;
@@ -22,6 +16,9 @@ public class Cliente implements Comparable<Cliente>{
     }
     public int getEta() {
         return eta;
+    }
+    public UUID getId() {
+        return id;
     }
 
     @Override

@@ -11,6 +11,8 @@ public class Utente {
         this.nome=n;
         interestedIn.add(interesse);
     }
+
+
     public String getNome() {
         return nome;
     }
@@ -18,7 +20,7 @@ public class Utente {
         return interestedIn;
     }
 
-    void addInteresse(Interesse interesse){
+    public void addInteresse(Interesse interesse){
         this.interestedIn.add(interesse);
     }
 

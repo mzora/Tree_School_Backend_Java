@@ -5,10 +5,10 @@ import java.util.Objects;
 
 public class Interesse implements Comparable<Interesse>{
     private int codice;
-    private String interesse;
-    public Interesse(int codice,String interesse){
+    private String testo;
+    public Interesse(int codice,String testo){
         this.codice=codice;
-        this.interesse=interesse;
+        this.testo=testo;
     }
 
     public int getCodice() {
@@ -20,7 +20,7 @@ public class Interesse implements Comparable<Interesse>{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Interesse interesse1 = (Interesse) o;
-        return Objects.equals(interesse, interesse1.interesse);
+        return Objects.equals(testo, interesse1.testo);
     }
 
     @Override

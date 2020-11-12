@@ -8,7 +8,7 @@ public class TinderApp {
         this.lista= new HashMap<>();
     }
 
-    void addUtente(Utente utente){
+    public void addUtente(Utente utente){
         lista.put(utente,utente.getInterestedIn());
     }
 }

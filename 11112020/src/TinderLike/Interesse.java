@@ -16,20 +16,12 @@ public class Interesse implements Comparable<Interesse>{
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Interesse interesse1 = (Interesse) o;
-        return Objects.equals(testo, interesse1.testo);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(codice);
-    }
-
-    @Override
     public int compareTo(Interesse o) {
         return Comparator.comparing(Interesse::getCodice).compare(this , o);
+    }
+
+    @Override
+    public String toString() {
+        return testo;
     }
 }

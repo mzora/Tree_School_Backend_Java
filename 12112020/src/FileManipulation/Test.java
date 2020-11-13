@@ -52,8 +52,12 @@ public class Test {
         for (String s : listaStringhe){
             List<String> words = new ArrayList<>();
             String[] splitted = s.split(":");
-
+            //TODO 757e5ec3, rimuovere "," inizio e fine stringa
             for(int i=1; i< splitted.length;i++){
+                splitted[i] = splitted[i].replaceAll("[\\.\\?\\;]","");
+                splitted[i] = splitted[i].replaceAll(","," ");
+                splitted[i] = splitted[i].replaceAll(" {2}"," ");
+                splitted[i] = splitted[i].replaceAll(" ",",");
                 words.add(splitted[i]);
             }
             mappedContent.put(splitted[0],words);

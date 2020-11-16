@@ -2,13 +2,15 @@ package Facebook;
 import java.util.*;
 
 public class Post {
-    private User owner;
+    private final UUID author;
+    private final String authorName;
     private String content;
     private LinkedList<Comment> commentList;
     private HashSet<UUID> likes;
 
     public Post(String content,User user){
-        this.owner=user;
+        this.author=user.getId();
+        this.authorName=user.getNome();
         this.content=content;
         likes=new HashSet<>();
         commentList=new LinkedList<Comment>();
@@ -25,7 +27,7 @@ public class Post {
 
     public void addComment(User user){
         Scanner sc =new Scanner(System.in);
-        System.out.println("Write new Comment "+user.getNome());
+        System.out.println("Write new Comment "+user.getNome()+" to "+this.authorName+"'s post.");
         String text = sc.nextLine();
 
         Comment commentByUser = new Comment(user,text);
@@ -36,7 +38,7 @@ public class Post {
         ArrayList<Comment> listaCommentiUtente =new ArrayList<>();
 
         for(Comment comment : commentList){
-            if(comment.getWrittenBy().equals(user)){
+            if(comment.getWrittenBy().equals(user.getId())){
                 listaCommentiUtente.add(comment);
             }
         }
@@ -54,7 +56,7 @@ public class Post {
 
         listaCommentiUtente.clear();
         for(Comment comment : commentList){
-            if(comment.getWrittenBy().equals(user)){
+            if(comment.getWrittenBy().equals(user.getId())){
                 listaCommentiUtente.add(comment);
             }
         }
@@ -64,8 +66,24 @@ public class Post {
         }
     }
 
-    public User getOwner() {
-        return owner;
+    public UUID getAuthor() {
+        return author;
     }
 
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public LinkedList<Comment> getCommentList() {
+        return commentList;
+    }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "author=" + author +
+                ", content='" + content + '\'' +
+                ", likes=" + likes.size() +
+                '}';
+    }
 }

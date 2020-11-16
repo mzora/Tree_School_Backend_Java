@@ -36,7 +36,7 @@ public class Test {
             }
         }
 
-        Path origRighe2 = Paths.get("/Users/mariozora/IdeaProjects/Tree_School_Backend_Java/12112020/src/FileManipulation/Righe2");
+        Path origRighe2 = Paths.get("Users","mariozora","IdeaProjects","Tree_School_Backend_Java","12112020","src","FileManipulation","Righe2");
         ArrayList<String> listaStringhe = new ArrayList<>();
 
         try(BufferedReader br = Files.newBufferedReader(origRighe2)){

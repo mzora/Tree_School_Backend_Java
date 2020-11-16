@@ -18,19 +18,21 @@ public class Comment {
         this.dateTime=LocalDateTime.now();
     }
 
+    public UUID getId() {
+        return id;
+    }
+
     public String getComment() {
         return comment;
     }
 
-    public String getWrittenBy() {
-        return writtenBy.getNome();
+    public UUID getWrittenBy() {
+        return writtenBy.getId();
     }
+    public String getAuthorName(){return writtenBy.getNome();}
 
     public LocalDateTime getDateTime() {
         return dateTime;
-    }
-    public UUID getId() {
-        return id;
     }
 
     @Override

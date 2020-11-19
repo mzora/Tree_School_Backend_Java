@@ -80,4 +80,9 @@ public class Person {
     public enum SituaClinica {
         SOTTOCONTROLLO,CAUTELA,CRITICA
     }
+
+    @Override
+    public String toString() {
+        return id.toString();
+    }
 }

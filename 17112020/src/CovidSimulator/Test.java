@@ -14,7 +14,7 @@ public class Test {
         //int processors = Runtime.getRuntime().availableProcessors();System.out.println(processors);
 
         //testCovidCatcher();
-        testCovidCatcher_V2();
+        //testCovidCatcher_V2();
         }
 
     public static void testCovidCatcher(){
@@ -107,5 +107,32 @@ public class Test {
         }
 
         System.out.println(System.currentTimeMillis() - startTime);
+    }
+    public static void testCovidCatcher_V3(){
+        idTamponi = new Stack<>();
+        CovidCatcher_V3 nord = new CovidCatcher_V3("files\\nord.txt", idTamponi);
+        CovidCatcher_V3 centro = new CovidCatcher_V3("files\\centro.txt", idTamponi);
+        CovidCatcher_V3 sud = new CovidCatcher_V3("files\\sud.txt", idTamponi);
+
+        nord.start();
+        centro.start();
+        sud.start();
+
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter("output.txt")))
+        {
+            while(nord.isAlive() || centro.isAlive() || sud.isAlive())
+            {
+                while(!idTamponi.empty())
+                    bw.write(idTamponi.pop() + '\n');
+            }
+
+            while(!idTamponi.empty())
+                bw.write(idTamponi.pop() + '\n');
+        }
+
+        catch (IOException ioe)
+        {
+            System.out.println(ioe);
+        }
     }
 }

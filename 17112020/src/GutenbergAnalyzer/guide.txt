@@ -1,0 +1,18 @@
+/*
+    1)Per ogni libro (per ogni file in books)
+        produrre un array[26] dove
+            arr[0]=conteggio"a"presenti
+            arr[1]=conteggio"b"presenti
+            ecc..
+        ignorare:
+            lettere accentate
+            simboli punteggiatura
+            numeri
+            altri simboli
+
+      2)Per ogni libro
+        calcolare la "distanza con tutti gli altri" in dimensione "26"
+
+      3)Redigere una classifica dei 5 libri piu vicini escluso sé stesso
+        (classifiche calcolate in zone di codice eseguite in parallelo)
+*/

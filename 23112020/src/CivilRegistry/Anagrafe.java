@@ -30,23 +30,43 @@ public class Anagrafe {
     }
 
     public void getPersonFromName(String nome){
-        persone.stream().filter(p->p.getNome().equals(nome)).forEach(person -> System.out.println(person.toString()));
+        persone.stream()
+                .filter(p->p.getNome().equals(nome))
+                .forEach(person -> System.out.println(person.toString()));
     }
 
     public void getOldestPersons(){
         List<Person> limited =
-        persone.stream().sorted().limit(3).collect(Collectors.toList());
+        persone.stream()
+                .sorted()
+                .limit(3)
+                .collect(Collectors.toList());
         for (Person person : limited) {
             System.out.println(person);
         }
     }
 
     public void getAddressFromName(String nome){
-        persone.stream().filter(p->p.getNome().equals(nome)).forEach(person -> System.out.println(person.getIndirizzo()));
+        persone.stream()
+                .filter(p->p.getNome().equals(nome)).
+                forEach(person -> System.out.println(person.getIndirizzo()));
     }
 
     public void getAllPersons(){
         for (Person person : persone) {
+            System.out.println(person.toString());
+        }
+    }
+
+    public void getFigliFromParentName(String nome) {
+        //lista di di liste di figli
+
+        ArrayList<Person> figli = (ArrayList<Person>)
+                persone.stream()
+                        .filter(p -> p.getNome().equals(nome))
+                        .flatMap(person -> person.getFigli().stream())
+                        .collect(Collectors.toList());
+        for (Person person : figli) {
             System.out.println(person.toString());
         }
     }

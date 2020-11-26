@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Botticelli">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/telegramLibrary/Botticelli.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

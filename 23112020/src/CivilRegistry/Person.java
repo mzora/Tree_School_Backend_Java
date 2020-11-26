@@ -1,5 +1,6 @@
 package CivilRegistry;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Person implements Comparable<Person>{
@@ -8,6 +9,7 @@ public class Person implements Comparable<Person>{
     private int eta;
     private String cf;
     private String indirizzo;
+    private ArrayList<Person> prole;
 
     public Person(String nome, String cognome, int eta, String cf, String indirizzo) {
         this.nome = nome;
@@ -15,6 +17,15 @@ public class Person implements Comparable<Person>{
         this.eta = eta;
         this.cf = cf;
         this.indirizzo = indirizzo;
+        this.prole= new ArrayList<>();
+    }
+
+    public void addFiglio(Person p){
+        prole.add(p);
+    }
+
+    public ArrayList<Person> getFigli(){
+        return this.prole;
     }
 
     public String getCf() {
